@@ -6,9 +6,9 @@ class Pet extends Component{
     this.state = {
       pets: this.props.pets
     }
-    console.log(this.state.pets[0])
   }
   render(){
+    var href = "pets/"
     var pets = this.state.pets.map(function(p){
       return(
         <tr>
@@ -17,20 +17,23 @@ class Pet extends Component{
           <td key={p.color}>{p.color}</td>
           <td key={p.place}>{p.place}</td>
           <td key={p.time}>{p.time}</td>
+          {console.log(p.id)}
+          <td><a href={'pets/' + p.id} className="btn btn-info">More Info</a></td>
         </tr>
       )
     })
     return(
-      <div class="page_header">
+      <div className="page_header">
         <h1>Lost Pets of San Diego!</h1>
-        <table class="table table-striped table-hover table-bordered">
-          <thead class="thead-dark">
+        <table className="table table-striped table-hover table-bordered">
+          <thead className="thead-dark">
             <tr>
               <th> Species </th>
               <th> Name </th>
               <th> Color </th>
               <th> Last Location </th>
               <th> Time Seen </th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
