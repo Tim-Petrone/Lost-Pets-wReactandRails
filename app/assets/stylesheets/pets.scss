@@ -1,0 +1,18 @@
+// Place all the styles related to the Pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  text-align: center;
+}
+.page_header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.pet_data {
+  padding: 10px;
+  margin: 10px;
+}
+table {
+  border-spacing: 0.5rem;
+}
